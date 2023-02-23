@@ -2,12 +2,11 @@ FROM alpine
 
 RUN mkdir data
 # Update Ubuntu Software repository
-RUN apt update
-RUN apt upgrade -y
+RUN apk update
+RUN apk upgrade -y
 
 # Install nginx, php-fpm and supervisord from ubuntu repository
-RUN  apt update
-RUN  apt install nginx
+RUN  apk add nginx
 
 # Copy start.sh script and define default command for the container
 COPY ./index.html /usr/share/nginx/html/index.html
