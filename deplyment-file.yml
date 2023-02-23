@@ -31,7 +31,7 @@ metadata:
     app: deploy-service
 spec:
   selector:
-    app: pro-service
+    app: pro-server
   type: LoadBalancer
   ports:
     - port: 80
