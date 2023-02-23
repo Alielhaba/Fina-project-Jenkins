@@ -15,7 +15,7 @@ pipeline {
         stage('deploy') {
             steps {
                     sh    """
-                        kubectl apply -f deployment-file 
+                        kubectl apply -f deplyment-file.yml 
                     """
             }
         }
