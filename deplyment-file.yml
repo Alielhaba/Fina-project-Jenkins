@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: pro-server
-          image: alielhabal70/final-pro:latest
+          image: alielhabal70/final-pro1:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
