@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: pro-server
-          image:  ali3elhabal/final-pro:latest
+          image:  alielhabal70/final-pro:latest
           resources:
             limits:
               memory: "2Gi"
