@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM alpine
 
 RUN mkdir data
 # Update Ubuntu Software repository
@@ -6,8 +6,8 @@ RUN apt update
 RUN apt upgrade -y
 
 # Install nginx, php-fpm and supervisord from ubuntu repository
-RUN sudo apt update
-RUN sudo apt install nginx
+RUN  apt update
+RUN  apt install nginx
 
 # Copy start.sh script and define default command for the container
 COPY ./index.html /usr/share/nginx/html/index.html
