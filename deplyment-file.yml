@@ -1,19 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: final
+  name: pro-server
+  labels:
+    app: pro-server
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: pro-server
+  template:
+    metadata:
+      labels:
+        app: pro-server
     spec:
       containers:
         - name: pro-server
-          image:  alielhabal70/final-pro:latest
+          image: alielhabal70/final-pro:latest
+          imagePullPolicy: Always
           ports:
-            - name: http
-              containerPort: 80
+            - containerPort: 80
+          resources: {}
     
 ---
 apiVersion: v1
