@@ -26,9 +26,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pro-service
+  name: deploy-service
   labels:
-    app: pro-service
+    app: deploy-service
 spec:
   selector:
     app: pro-service
